@@ -11,7 +11,7 @@
                 .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                     $stateProvider
                         .state('home', {
-                            url: '/',
+                            url: '/api/resource1',
                             template: '<h1>Hello</h1>{{ data.key1 }}<br />{{ data.key2 }}',
                             controller: 'HelloController',
                         })

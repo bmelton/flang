@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request, send_from_directory
 app = Flask(__name__, static_url_path='')
 
 
-@app.route('/index')
+@app.route('/')
 def send_index():
     return send_from_directory('./static/', 'index.html')
 
@@ -12,7 +12,7 @@ def send_js(path):
     return send_from_directory('./static/js', path)
 
 
-@app.route('/')
+@app.route('/api/resource1')
 def hello_world():
     # Replace this with whatever data you parse from the DB or whatever
     output = {}
