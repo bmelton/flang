@@ -11,7 +11,7 @@
                 .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                     $stateProvider
                         .state('home', {
-                            url: '/api/resource1',
+                            url: '/',
                             template: '<h1>Hello</h1>{{ data.key1 }}<br />{{ data.key2 }}',
                             controller: 'HelloController',
                         })
@@ -24,7 +24,7 @@
                     });
                 })
                 .controller('HelloController', ['$scope', '$http', function($scope, $http) {
-                    $http.get("/")
+                    $http.get("/api/resource1")
                         .success(function(data) {
                             $scope.data = data;
                         })
